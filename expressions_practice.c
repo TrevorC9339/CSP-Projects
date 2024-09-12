@@ -40,21 +40,38 @@ int value7;
     printf("%d\n", value7);
 
 
-c
-
 int value8;
+
+    int powerValue81=(int)pow(5,2);
+    int powerValue82=(int)pow(2,2);
+    
     value8=((3*powerValue81/15)-(5-powerValue82));
     printf("%d\n", value8);
 
-int powerValue91=(int)pow(1,4);
-int powerValue92=(int)pow(2,2);
-int powerValue93=(int)pow(3,3);
-int powerValue94=(int)pow(2,5);
+
     
 int value9;
-    value9=()
+    int powerValue91=(int)pow(1,4);
+    int powerValue92=(int)pow(2,2);
+    int powerValue93=(int)pow(3,3);
+    int powerValue94=(int)pow(2,5);
 
-    return 0;
+    value9=((powerValue91*powerValue92+powerValue93)-(powerValue94/4));
+    printf("%d\n", value9);
+
+
+
+
+
+int value10;
+    int powerValue101=(int)pow((22/2-2*5),2);
+    int powerValue102=(int)pow((4-6/6),2);
+
+    value10=(powerValue101+powerValue102);
+    printf("%d\n", value10);
+
+return 0;
+
 
 
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    float prent putilities ptransport pexpenses pgrocieries;
+    float prent, putilities, ptransport, pexpenses, pgrocieries;
     float income, rent, transport, utilities, grocieries, expenses, savings, total;
     printf("This is going to calculate your budget for the month\n");
     printf("How much do you make a month?\n");
@@ -22,10 +22,10 @@ int main(void){
     ptransport = transport/income;
     pgrocieries = grocieries/income;
     pexpenses = expenses/income;
-    printf("your income is:  $%.2f\n , income");
-    printf("your expenses is:  $%.2f\n , expenses");
-    printf("your savings is:  $%.2f\n , total");
-    printf("your rent is:  $%.2f\n , prent");
+    printf("your income is:  $%.2f\n" , income);
+    printf("your expenses is:  $%.2f\n" , expenses);
+    printf("your savings is:  $%.2f\n" , total);
+    printf("your rent is:  $%.2f\n" , prent);
     printf("Hello World!");
     return 0;
  }

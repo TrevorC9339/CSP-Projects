@@ -1,0 +1,5 @@
+print("Hello, this will create a silly sotry based on your inputs.")
+adjective1 = input("Write an adjective:")
+noun1 = input("Write a place you visit:")
+verb1 = input("Write a verb in past tense:")
+print("As Henery walked out of his", adjective1, "house, he wondered why on earth he had gone to the", noun1, "in the first place. Henery", verb1, "when he learned he was leaving", noun1, ".")

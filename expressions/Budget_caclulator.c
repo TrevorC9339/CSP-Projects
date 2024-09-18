@@ -18,8 +18,8 @@ int main(void){
     savings = income *.2;
     total = income + expenses;
     prent = (rent/income);
-    putilities = (utilities/income;)
-    ptransport = (transport/income;)
+    putilities = (utilities/income);
+    ptransport = (transport/income);
     pgrocieries = (grocieries/income);
     pexpenses = (expenses/income);
     printf("your income is:  $%.2f\n" , income);

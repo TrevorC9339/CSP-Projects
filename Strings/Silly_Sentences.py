@@ -1,4 +1,4 @@
-print("Hello, this will create a silly sotry based on your inputs.")
+print("Hello! This will create a silly sotry based on your inputs.")
 adjective1 = input("Write an adjective:")
 noun1 = input("Write a place you visit:")
 verb1 = input("Write a verb in past tense:")

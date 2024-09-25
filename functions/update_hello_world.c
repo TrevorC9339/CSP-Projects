@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-  char name;
-  char str1[7] = "hello";
+char name;
+char john[5] = john;
 
-void namer(char str1, char name){
-
+void namer(char name[]){
+  char name = printf("Type a name:");
+  scanf("%s", name);
+  printf("Hello %s!\n", name);
 
 
 }
 
 int main(void){
     printf("Hello World!");
-    char name[20]=('John');
-    char name1[20]=('rick');
-    char name2[20]=('conner');
-    char name3[20]=('dan');
-    char name4[20]=('sam');
-    char str1[7] = "hello";
+    
+  namer("john");
      
 
 

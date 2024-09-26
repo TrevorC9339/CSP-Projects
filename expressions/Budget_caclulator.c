@@ -15,7 +15,7 @@ int main(void){
     printf("How much do you spend on trasport?\n");
     scanf("%f", &transport);
     expenses = rent + utilities + transport + grocieries;
-    savings = income *.2;
+    savings = income*.2;
     total = income + expenses;
     prent = (rent/income*100);
     putilities = (utilities/income*100);
@@ -25,8 +25,10 @@ int main(void){
     printf("your income is:  $%.2f\n" , income);
     printf("your expenses is:  $%.2f\n" , expenses);
     printf("your savings is:  $%.2f\n" , total);
-    printf("your rent is:  $%.2f\n" , prent);
+    printf("your rent is:  $%.2f\n" , rent);
+    
     printf("Hello World!");
+
     return 0;
  }
     

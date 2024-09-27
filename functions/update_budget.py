@@ -1,8 +1,8 @@
 from __future__ import division
 from cmath import rect
 
-def cost(type, var):
-    print(input("how much is your", type))
+def cost(type, varible):
+    input("how much is your", type, varible)
 
 def percent(type, amount):
     decimal = income/amount*100
@@ -12,11 +12,11 @@ def percent(type, amount):
 
 
 print("This will calculate your budget")
-income = cost("income", income)
+income = input("What is your income?")
 rent = cost("rent", rent)
-utilities = cost("utilities", utilities)
-groceries = cost("groceries", groceries)
-transport = cost("transport", transport)
+utilities = cost("utilities")
+groceries = cost("groceries", )
+transport = cost("transport")
 expenses = int(rent + utilities + transport + groceries)
 savings = int(income-expenses)
 total = (int(income) - int(expenses))

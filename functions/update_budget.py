@@ -6,7 +6,7 @@ def cost(int):
 
 def percent(type, amount):
     decimal = income/amount*100
-    print("your", type, "is %", decimal, "of your income.", type)
+    print("your", type, "is %", amount, "of your income.")
 
 print("This will calculate your budget")
 income = cost("income")

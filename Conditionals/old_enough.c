@@ -13,5 +13,6 @@ if (age >= 18){
 }else if (age >=5){
         printf("you can start school\n");
 }else  printf("go drink some milk baby");
-return 0;
+
+    return 0;
 }

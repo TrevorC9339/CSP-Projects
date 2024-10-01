@@ -1,10 +1,17 @@
 from datetime import datetime
+hour = datetime.now().hour
 
-now = datetime.now()
+earlyMorningHour = '3'
+lateMorningHour = '11'
 
-current_time = now.strftime("%H:%M:%S")
+earlyAfternoonHour = '11'
+lateAfternoonHour = '16'
 
-if (11, 30, 0, 0) < now and now >= (4, 0, 0, 0, 0):
+now = datetime.now().hour
+
+if int(earlyMorningHour) <= now and int(lateMorningHour) > now:
     print("Good morning!")
-elif (11, 30, 0, 0) > now < (16, 0, 0, 0, 0)
-    print("good afternoon")
+elif int(earlyAfternoonHour) <= now and int(lateAfternoonHour) > now:
+    print("Good afternoon!")
+elif int(earlyAfternoonHour) <= now and int(lateAfternoonHour) > now:
+    print("Good evening!")

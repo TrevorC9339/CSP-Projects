@@ -16,7 +16,7 @@ groceries = cost("groceries")
 transport = cost("transport")
 expenses = int(rent + utilities + transport + groceries)
 savings = int(income - expenses)
-total = (int(income) - int(expenses))
+total = income -expenses
 print("your income is: $", income)
 print("your expenses is: $", expenses)
 print("your savings is: $", savings)

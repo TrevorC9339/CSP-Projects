@@ -1,25 +1,36 @@
-print("hello, this is hangman! In this game you must guess the word before the man gets hung.")
-mysteryWord = "exponential"
-guess1 = input("Guess a letter:")
-default = ("***********")
-correctLetter = ["e", "x", "p", "o", "n", "t", "i", "a", "l"]
-if guess1 == "e":
-        print("That is correct")
-        print("e****e*****")
-elif guess1 == "x":
-        print("That is correct")
-elif guess1 == "p":
-        print("That is correct")
-elif guess1 == "o":
-        print("That is correct")
-elif guess1 == "n":
-        print("That is correct")
-elif guess1 == "a":
-        print("That is correct")
-else: print("That is wrong")
-def letter(guess, letter ):
-    if guess == "e" or "x" or "p" or "o" or "n" or "t" or "i" or "a" or "l":
-        print("that is correct")
+import random
+wordList = ["hello", "tall", "exceptional", "defiant", "mouse"]
+def getWord():
+    word = random.choice(wordList)
+    return word.upper()
 
-
+def play(word):
+    wordCompletion = "_" * len(word)
+    guessed = False
+    guessedLetters = []
+    guessedWords = []
+    tries = 6
+    print("this is hang man, you must guess teh word wihtout hanging the stickman. For every letter or words inccorect the stick man will gain a limb. Once he is complete you lose.")
+    print(displayHangman(tries))
+    print(wordCompletion)
+    while not guessed and tries > 0:
+        guess = input("guess a letter ot word").upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessedLetters:
+                print("already guessed this letter")
+            elif guess not in word:
+                print("this is not in the word")
+                tires -= 1
+                guessedLetters.append(guess)
+            else:
+                print("Correct!", guess, "Is the word!")
+                multipleIndex = [i for i, letter in enumerate(word) if letter == guess]
+                for index in multipleIndex:
+                    wordAsList[index] = guess
+                    wordCompletion = "".join(wordAsList)
+                    if "_" not in wordCompletion:
+                        guessed = True
+        elif len(guess) == len(word) and guess.isalpha():
+            
+        
     

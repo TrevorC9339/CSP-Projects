@@ -1,47 +1,18 @@
 import random
 wordList = ["exception", "straight", "replace", "direct", "temper", "cushion", "baseline", "savant"]
 word = random.choice(wordList)
-
+wordLength = len(word)
 allowedErrors = 6
 done = False
 guesses = []
+def table():
 
-while not done:
-       for letter in word:
-              if letter.lower() in guesses:
-                     print(letter, end=" ")
-              else:
-                     print("_", end=" ")
-              print("")
-              guess = input("Guess a letter or word:")
-
-              guesses.append(guess.lower())
-
-              if guess.lower() not in word.lower():
-                     allowedErrors -= 1
-              if allowedErrors == 0:
-                     break
-              done = True
-              for letter in word:
-                     if letter.lower() not in word:
-                            done = False
-
-if done:
-       print(word, "is the correct answer!")
-else:
-       print("That is not correct", word, "is the correct answer.")
-
-
-
-
-
-def table(tries):
-        try0 = """ |--------|
-               |        
-               |         
-               |        
-               |
-               |_________"""
+        if allowedErrors == 6: print(""" |--------|
+                                        |        
+                                        |         
+                                        |        
+                                        |
+                                        |_________""")
         try1 = """ |--------|
                |        O
                |        
@@ -84,3 +55,45 @@ def table(tries):
                |
                |_________"""
         return[table]
+if wordLength == 3:
+       unguessed = "_ _ _"
+if wordLength == 4:
+       unguessed = "_ _ _ _"
+if wordLength == 5:
+       unguessed = "_ _ _ _ _ _"
+if wordLength == 6:
+       unguessed = "_ _ _ _ _ _"
+if wordLength == 7:
+       unguessed = "_ _ _ _ _ _ _"
+if wordLength == 8:
+       unguessed = "_ _ _ _ _ _ _ _"
+if wordLength == 9:
+       unguessed = "_ _ _ _ _ _ _ _ _"
+else:
+       print("")
+print(word)
+while not done:
+       for letter in word:
+              guess = input("Guess a letter or word:")
+
+              guesses.append(guess.lower())
+              if word.lower in guesses:
+                     done = True
+              if guess.lower()in word.lower():
+                     print("that is correct")
+                     print("you have", allowedErrors, "tries remaining")
+                     print(guesses)
+              else:
+                     allowedErrors -= 1
+                     print("that is incorrect")
+                     print("you have", allowedErrors, "tries left")
+              if allowedErrors == 0:
+                     print("you have lost")
+                     print("play again if you wish")
+              break
+if done:
+       print(word, "is the correct answer!")
+       allowedErrors = 6
+else:
+       print("That is not correct", word, "is the correct answer.")
+

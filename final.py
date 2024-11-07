@@ -77,12 +77,20 @@ while not done:
               guess = input("Guess a letter or word:")
 
               guesses.append(guess.lower())
-              if word.lower in guesses:
+              if word.lower == guesses:
                      done = True
               if guess.lower()in word.lower():
                      print("that is correct")
                      print("you have", allowedErrors, "tries remaining")
-                     print(guesses)
+                     print(unguessed)
+                     wordLength -= 1
+                     if word[1] == guess:
+                            unguessed[1].replace("_", guess)
+                            print(guess + unguessed)
+                     if word[2] == guess:
+                            unguessed[3].replace("_", guess)
+                     if word[3] == guess:
+                            unguessed[5].replace("_", guess)
               else:
                      allowedErrors -= 1
                      print("that is incorrect")

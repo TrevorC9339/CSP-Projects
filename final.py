@@ -8,7 +8,7 @@ winstatus = False#make this so the while loop stops when the game ends
 board = ['-','-','-',#this is where you will play the game the underscores are empty slots for players, it makes the board a list so you can use numbers for inputs
          '-','-','-',
          '-','-','-']
-def board_(board):#create the board using previous varible
+def board_(board):#create the board using the list so it actaully is a tic tac toe board
     print(board[0] + ' | ' + board[1] + ' | ' + board[2])# creates lines inbetween the underscores for more clarity
     print(board[3] + ' | ' + board[4] + ' | ' + board[5])
     print(board[6] + ' | ' + board[7] + ' | ' + board[8])

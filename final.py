@@ -23,12 +23,9 @@ def input_(board):#this is for the players inputs to actually get on the board
         print(inp)#takes input of user
         if board[inp-1] == '-':
             board[inp-1] = 'X'#replaces the empty space with an x
-        print(board)
 
     else:
         print('Please check the input value before playing the game')#this checks to make sure the input is valid and works with the code
-
-input_(board)
 
 def checkHorizontal(board):#this checks for all the possiblites there are of winning with a horizontail three in a row
     if board[0] == board[1] == board[2] and board[0] != '-':#this checks for the top row 
@@ -78,8 +75,7 @@ def checkTie(board):#this makes sure that if there is no possible win then the g
             gameRunning = False#ends the game
 
 def switchPlayer(board):#this changes the players turn
-    rand_ = random.randint(0,9)#selects a random number 1 thtough 9
-    board[rand_] = 'O'
+    rand_ = random.randint(0,9)#selects a random number 1 through 9
     if board[rand_] != 'X' and board[rand_] == '-':#this checks if it is x or o
         board[rand_] = 'O'
     

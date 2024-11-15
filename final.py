@@ -17,7 +17,7 @@ def board_(board):#create the board using previous varible
 print(board_(board))#print the emtpy board for the begining of the game and the list so it is more clear what spacei s waht number and what space is taken
 
 def input_(board):#this is for the players inputs to actually get on the board
-    inp = int(input("each space is a number, tope left is 1 and bottom left is 9. type the number that is in your space. each item in the list is the board layed out in a line : "))#this takes the input as a number and is used to find which slot the player wants filled
+    inp = int(input("each space is a number, tope left is 1 and bottom left is 9. type the number that is in your space. each item in the list is the board layed out in a line, once player one has made their choce, player two must also input their decison : "))#this takes the input as a number and is used to find which slot the player wants filled
     board = board_(board)#this defines board in the function and allows the input to interact with it, so the players inputs can apear on the board after it is updated
     if inp >= 1 and inp <= 9:#makes sure that there are not too many slots filled on the board
         print(inp)#takes input of user
@@ -85,7 +85,7 @@ def switchPlayer(board):#this changes the players turn
     
 
 
-while gameRunning:#uses all the functions in the while loop so the game runs
+while gameRunning:#uses all the functions in the while loop so the game runs this creates an easy overview of what is happening and in what order
     input_(board)
     checkHorizontal(board)
     checkVertical(board)

@@ -2,8 +2,9 @@ import random
 import sys
 
 print("Welcome! Lets play Hangman.")
-
-wrongAttempt = 6
+def getname(name):
+     name = input("what is your name", name)
+getname(str)
 
 wordList = ["time", "gap", "jump", "devolve", "weep"]
 secretWord = random.choice(wordList)
